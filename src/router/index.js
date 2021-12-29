@@ -9,7 +9,7 @@ const requireAuth = (to, from, next) => {
     if (!user) {
         next({ name: 'Welcome' })
     } else {
-        next() // go to chatroom
+        next()
     }
 }
 

@@ -13,7 +13,7 @@ const getCollection = (collection) => {
         let results = []
 
         snap.docs.forEach(doc => {
-            // doc.data().createdAt , to be sure that it's not a local snap
+            // not getting a local snap
             doc.data().createdAt && results.push({...doc.data(), id: doc.id })
         })
 
